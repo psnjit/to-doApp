@@ -110,6 +110,8 @@ function elementClicked(event) {
 
 function loadTaskList(){
     taskList=JSON.parse(localStorage.getItem('data'));
+    if(!taskList)
+        taskList=[];
     console.log(typeof taskList);
     addTaskElement();
 }
